@@ -108,28 +108,147 @@ FROM website_sessions ws
 GROUP BY 1,2;
 ```
 
-Aggregate the data based on user types.
-```
-aggregate(bike_data$ride_length ~ bike_data$member_casual, FUN = mean)
-aggregate(bike_data$ride_length ~ bike_data$member_casual, FUN = median)
-aggregate(bike_data$ride_length ~ bike_data$member_casual + bike_data$day_of_week, FUN = mean)
-```
 ![000005](https://user-images.githubusercontent.com/62857660/135518463-b62936bd-ae6a-479d-9613-412ef341bfca.png)
 
 
 
-Analyze ridership by user types and day of the week.
+2. Obtain overall sessions to orders conversion rate, revenue per order and revenue per sessions for every quarter
 ```
-bike_data %>% 
-  mutate(weekday = wday(started_at, label = TRUE)) %>%  
-  group_by(member_casual, weekday) %>%  
-  summarise(number_of_rides = n()							
-  ,average_duration = mean(ride_length)) %>% 		
-  arrange(member_casual, weekday)								
- ```
+SELECT
+	YEAR(ws.created_at) AS yr,
+	QUARTER(ws.created_at) AS qr,
+    	COUNT(o.order_id) / COUNT(ws.website_session_id) AS conv_rate,
+    	SUM(o.price_usd) / COUNT(o.order_id) AS revenue_per_order,
+    	SUM(o.price_usd) / COUNT(ws.website_session_id) AS revenue_per_session
+FROM website_sessions ws
+	LEFT JOIN orders o
+		ON ws.website_session_id = o.website_session_id
+GROUP BY 1,2;							
+```
  ![000003](https://user-images.githubusercontent.com/62857660/135518560-3169ab87-8a83-41d3-aad2-136483a6d188.png)
 
- 
+
+
+3. Obtain the overall number of orders from different channels for every quarter
+
+```
+SELECT
+    YEAR(ws.created_at) AS yr,
+    QUARTER(ws.created_at) AS qr,
+    COUNT(CASE WHEN ws.utm_source = 'gsearch' AND ws.utm_campaign = 'nonbrand' AND o.order_id IS NOT NULL THEN 1 ELSE NULL END) AS g_nonbrand_orders,
+    COUNT(CASE WHEN ws.utm_source = 'bsearch' AND ws.utm_campaign = 'nonbrand' AND o.order_id IS NOT NULL THEN 1 ELSE NULL END) AS b_nonbrand_orders,
+    COUNT(CASE WHEN ws.utm_campaign = 'brand' AND o.order_id IS NOT NULL THEN 1 ELSE NULL END) AS brand_orders,
+    COUNT(CASE WHEN ws.utm_source IS NULL AND ws.http_referer IS NOT NULL AND o.order_id IS NOT NULL THEN 1 ELSE NULL END) AS o_search_orders,
+    COUNT(CASE WHEN ws.utm_source IS NULL AND ws.http_referer IS NULL AND o.order_id IS NOT NULL THEN 1 ELSE NULL END) AS direct_orders
+FROM website_sessions ws
+    LEFT JOIN orders o
+        ON ws.website_session_id = o.website_session_id
+GROUP BY 1,2;
+```
+
+4. Obtain the overall session to order conversion rate for the different channels for every quarter
+
+```
+SELECT
+    YEAR(ws.created_at) AS yr,
+    QUARTER(ws.created_at) AS qr,
+    COUNT(CASE WHEN ws.utm_source = 'gsearch' AND ws.utm_campaign = 'nonbrand' AND o.order_id IS NOT NULL THEN 1 ELSE NULL END) / COUNT(CASE WHEN ws.utm_source = 'gsearch' AND ws.utm_campaign = 'nonbrand' THEN 1 ELSE NULL END) AS g_nonbrand_conv_rate,
+    COUNT(CASE WHEN ws.utm_source = 'bsearch' AND ws.utm_campaign = 'nonbrand' AND o.order_id IS NOT NULL THEN 1 ELSE NULL END) / COUNT(CASE WHEN ws.utm_source = 'bsearch' AND ws.utm_campaign = 'nonbrand' THEN 1 ELSE NULL END) AS b_nonbrand_conv_rate,
+    COUNT(CASE WHEN ws.utm_campaign = 'brand' AND o.order_id IS NOT NULL THEN 1 ELSE NULL END) / COUNT(CASE WHEN ws.utm_campaign = 'brand' THEN 1 ELSE NULL END) AS brand_orders_conv_rate,
+    COUNT(CASE WHEN ws.utm_source IS NULL AND ws.http_referer IS NOT NULL AND o.order_id IS NOT NULL THEN 1 ELSE NULL END) / COUNT(CASE WHEN ws.utm_source IS NULL AND ws.http_referer IS NOT NULL THEN 1 ELSE NULL END) AS o_search_conv_rate,
+    COUNT(CASE WHEN ws.utm_source IS NULL AND ws.http_referer IS NULL AND o.order_id IS NOT NULL THEN 1 ELSE NULL END) / COUNT(CASE WHEN ws.utm_source IS NULL AND ws.http_referer IS NULL THEN 1 ELSE NULL END) AS direct_conv_rate
+FROM website_sessions ws
+    LEFT JOIN orders o
+        ON ws.website_session_id = o.website_session_id
+GROUP BY 1,2;
+```
+
+5. Obtain total monthly revenues and profits, as well as monthly revenues and profits for different products
+
+```
+SELECT 
+    YEAR(created_at) AS yr,
+    MONTH(created_at) AS mo,
+    SUM(CASE WHEN product_id = 1 THEN price_usd ELSE 0 END) AS revenue_1,
+    SUM(CASE WHEN product_id = 1 THEN price_usd - cogs_usd ELSE 0 END) AS margin_1,
+    SUM(CASE WHEN product_id = 2 THEN price_usd ELSE 0 END) AS revenue_2,
+    SUM(CASE WHEN product_id = 2 THEN price_usd - cogs_usd ELSE 0 END) AS margin_2,
+    SUM(CASE WHEN product_id = 3 THEN price_usd ELSE 0 END) AS revenue_3,
+    SUM(CASE WHEN product_id = 3 THEN price_usd - cogs_usd ELSE 0 END) AS margin_3,
+    SUM(CASE WHEN product_id = 4 THEN price_usd ELSE 0 END) AS revenue_4,
+    SUM(CASE WHEN product_id = 4 THEN price_usd - cogs_usd ELSE 0 END) AS margin_4,
+    COUNT(order_id) AS total_sales,
+    SUM(price_usd) AS total_revenue,
+    SUM(price_usd-cogs_usd) AS total_margin
+FROM order_items
+GROUP BY 1,2;
+```
+
+6. Focusing on the products webpage, obtain its monthly overall sessions, its clickthrough rate and the conversion rate from visiting the page to placing an order 
+
+```
+CREATE TEMPORARY TABLE products_pageviews
+SELECT 
+    website_session_id,
+    website_pageview_id,
+    created_at AS saw_product_page_at
+FROM website_pageviews
+WHERE pageview_url = '/products';
+
+SELECT 
+    YEAR(saw_product_page_at) AS yr,
+    MONTH(saw_product_page_at) AS mo,
+    COUNT(DISTINCT pp.website_session_id) AS sessions_to_product_page,
+    COUNT(DISTINCT wp.website_session_id) AS clicked_to_next_page,
+    COUNT(DISTINCT wp.website_session_id) / COUNT(DISTINCT pp.website_session_id) AS clickthrough_rt,
+    COUNT(DISTINCT o.order_id) AS orders,
+    COUNT(DISTINCT o.order_id) / COUNT(DISTINCT pp.website_session_id) AS products_to_order_rt
+FROM products_pageviews pp
+    LEFT JOIN website_pageviews wp
+	ON wp.website_session_id = pp.website_session_id
+	    AND wp.website_pageview_id > pp.website_pageview_id
+    LEFT JOIN orders o
+	ON o.website_session_id = pp.website_session_id
+GROUP BY 1,2;
+```
+
+7. After launching the newest product, obtain sales data since then, and show how well each product cross sells from one another
+
+```
+CREATE TEMPORARY TABLE primary_products
+SELECT
+	order_id,
+        primary_product_id,
+        created_at AS ordered_at
+FROM orders
+WHERE created_at > '2014-12-05';
+
+
+SELECT 
+    primary_product_id,
+    COUNT(DISTINCT order_id) AS total_orders,
+    COUNT(DISTINCT CASE WHEN cross_sell_product_id = 1 THEN order_id ELSE NULL END) AS _xsold_p1,
+    COUNT(DISTINCT CASE WHEN cross_sell_product_id = 2 THEN order_id ELSE NULL END) AS _xsold_p2,
+    COUNT(DISTINCT CASE WHEN cross_sell_product_id = 3 THEN order_id ELSE NULL END) AS _xsold_p3,
+    COUNT(DISTINCT CASE WHEN cross_sell_product_id = 4 THEN order_id ELSE NULL END) AS _xsold_p4,
+    COUNT(DISTINCT CASE WHEN cross_sell_product_id = 1 THEN order_id ELSE NULL END) / COUNT(DISTINCT order_id) AS p1_xsell_rt,
+    COUNT(DISTINCT CASE WHEN cross_sell_product_id = 2 THEN order_id ELSE NULL END) / COUNT(DISTINCT order_id) AS p2_xsell_rt,
+    COUNT(DISTINCT CASE WHEN cross_sell_product_id = 3 THEN order_id ELSE NULL END) / COUNT(DISTINCT order_id) AS p3_xsell_rt,
+    COUNT(DISTINCT CASE WHEN cross_sell_product_id = 4 THEN order_id ELSE NULL END) / COUNT(DISTINCT order_id) AS p4_xsell_rt
+
+FROM 
+(
+SELECT
+    pp.*,
+    o.product_id AS cross_sell_product_id
+FROM primary_products pp
+    LEFT JOIN order_items o
+	ON o.order_id = pp.order_id
+	    AND o.is_primary_item = 0
+) AS primary_w_cross_sell
+GROUP BY 1;
+
+```
  ⛔ For the complete R code and analyze the data using ggplot for graphical interpretation, please view the rmd file on this [R code link](https://github.com/xtenix88/Google-Data-Analytic-Capstone/blob/main/Cyclist-Data-Analysis-Google-Capstone.Rmd)!
  
 
