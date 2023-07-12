@@ -107,8 +107,9 @@ FROM website_sessions ws
       ON ws.website_session_id = o.website_session_id
 GROUP BY 1,2;
 ```
+<img width="1061" alt="Screenshot 2023-07-12 at 2 00 31 PM" src="https://github.com/michaenho/mavenfuzzyfactory-analytics/assets/74249209/4cd30f3c-5264-4800-a34e-14a7a100e3de">
 
-![000005](https://user-images.githubusercontent.com/62857660/135518463-b62936bd-ae6a-479d-9613-412ef341bfca.png)
+
 
 
 
