@@ -126,7 +126,8 @@ FROM website_sessions ws
 		ON ws.website_session_id = o.website_session_id
 GROUP BY 1,2;							
 ```
- ![000003](https://user-images.githubusercontent.com/62857660/135518560-3169ab87-8a83-41d3-aad2-136483a6d188.png)
+<img width="1057" alt="Screenshot 2023-07-12 at 2 36 16 PM" src="https://github.com/michaenho/mavenfuzzyfactory-analytics/assets/74249209/6cedb4aa-4b2b-4f2f-ac45-297b5f659c66">
+
 
 
 
