@@ -35,20 +35,17 @@ Tables:
   - products
   - website_pageviews
   - website_sessions
+    
 
 The database contains 6 tables containing information such as users' website sessions, their orders, and their refunds. It is a big dataset that contains records of about 400,000 users. Also, it is comprehensive as it includes the actual time when they enter every webpages, utm trackers to track the performance of campaigns and contents, devices that the users use to enter the websites, as well as all the products that they have bought.
 
 
+
 ⛔ The dataset has limitations:
 
-- Personally identifiable information: the dataset has a restriction of personally identifiable information, so we have no data if that a ride is by an unique rider or the same rider who ride more than once as a casual rider or a member. 
-- NA values: after checking `sum(is.na(bike_data))`, we see the dataset has 1893790 NA values, such as in starting_station_id, end_station_id. Further investigation we noticed the NA values are mostly under rideable type: electric bike. Future investigations may be needed by the station names are not entered for electric bike. 
+Since it is a custom built database, the data used is synthetic (data privacy is a concern)
 
-  ```
-  head(count(bike_data, start_station_name, member_casual,  rideable_type, sort= TRUE))
-  
-  head(count(bike_data, end_station_name, member_casual,  rideable_type, sort= TRUE))
-  ```
+
 
 ## 3. Process
 
@@ -96,11 +93,19 @@ Clean the data to prepare for analysis in 4. Analyze!
 
 ## 4. Analyze
 
-
-Check min, max, mean, median and any outlier on the ride length. 
+1. Obtain overall session and order volumes for every quarter
 
 ```
-summary(bike_data$ride_length)
+SELECT
+  YEAR(ws.created_at) AS yr,
+  QUARTER(ws.created_at) AS qr,
+  COUNT(DISTINCT ws.website_session_id) AS total_sessions,
+  COUNT(DISTINCT o.order_id) AS total_orders
+FROM website_sessions ws
+	LEFT JOIN 
+    orders o
+      ON ws.website_session_id = o.website_session_id
+GROUP BY 1,2;
 ```
 
 Aggregate the data based on user types.
