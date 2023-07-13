@@ -170,6 +170,12 @@ FROM website_sessions ws
         ON ws.website_session_id = o.website_session_id
 GROUP BY 1,2;
 ```
+<img width="1058" alt="Screenshot 2023-07-13 at 3 23 09 PM" src="https://github.com/michaenho/mavenfuzzyfactory-analytics/assets/74249209/76f18963-9815-4e0c-adcd-cee395fc0c52">
+
+<img width="1058" alt="Screenshot 2023-07-13 at 3 28 15 PM" src="https://github.com/michaenho/mavenfuzzyfactory-analytics/assets/74249209/5db16825-64ae-4b91-b438-f053764aa6a6">
+
+
+
 
 5. Obtain total monthly revenues and profits, as well as monthly revenues and profits for different products
 
