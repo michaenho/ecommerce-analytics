@@ -237,6 +237,9 @@ FROM products_pageviews pp
 GROUP BY 1,2;
 ```
 
+![image](https://github.com/michaenho/mavenfuzzyfactory-analytics/assets/74249209/7baf5af7-6d88-42ff-a8bf-eb25e922b1d7)
+
+
 7. After launching the newest product, obtain sales data since then, and show how well each product cross sells from one another
 
 ```
