@@ -278,6 +278,10 @@ FROM primary_products pp
 GROUP BY 1;
 
 ```
+
+![image](https://github.com/michaenho/mavenfuzzyfactory-analytics/assets/74249209/bd400456-7361-47f0-8f8e-c46160770710)
+
+
  ⛔ For the complete R code and analyze the data using ggplot for graphical interpretation, please view the rmd file on this [R code link](https://github.com/xtenix88/Google-Data-Analytic-Capstone/blob/main/Cyclist-Data-Analysis-Google-Capstone.Rmd)!
  
 
