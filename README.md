@@ -200,6 +200,11 @@ FROM order_items
 GROUP BY 1,2;
 ```
 
+
+<img width="1054" alt="Screenshot 2023-07-13 at 4 15 26 PM" src="https://github.com/michaenho/mavenfuzzyfactory-analytics/assets/74249209/c8d26f63-e2b3-46d2-b7f0-533882e46c75">
+
+
+
 <img width="1057" alt="Screenshot 2023-07-13 at 4 05 28 PM" src="https://github.com/michaenho/mavenfuzzyfactory-analytics/assets/74249209/087bc12e-b27b-4230-8e7c-5218240498af">
 
 
