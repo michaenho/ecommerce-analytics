@@ -149,6 +149,9 @@ GROUP BY 1,2;
 ```
 <img width="1060" alt="Screenshot 2023-07-13 at 2 51 54 PM" src="https://github.com/michaenho/mavenfuzzyfactory-analytics/assets/74249209/46f2519f-d19f-4304-b484-72c2b0f354c0">
 
+<img width="1062" alt="Screenshot 2023-07-13 at 2 55 38 PM" src="https://github.com/michaenho/mavenfuzzyfactory-analytics/assets/74249209/02c9b56e-1f9f-4125-a13f-fd171a1d53cc">
+
+
 
 
 4. Obtain the overall session to order conversion rate for the different channels for every quarter
