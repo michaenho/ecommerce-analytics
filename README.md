@@ -1,4 +1,4 @@
-# CASE STUDY: Maven Fuzzy Factory Analysis
+<img width="1057" alt="Screenshot 2023-07-13 at 4 05 28 PM" src="https://github.com/michaenho/mavenfuzzyfactory-analytics/assets/74249209/8ab363fe-9f8f-4d73-95f9-a430a5b5678f"># CASE STUDY: Maven Fuzzy Factory Analysis
 
 ##### Author: Michaen Ho
 
@@ -199,6 +199,10 @@ SELECT
 FROM order_items
 GROUP BY 1,2;
 ```
+
+<img width="1057" alt="Screenshot 2023-07-13 at 4 05 28 PM" src="https://github.com/michaenho/mavenfuzzyfactory-analytics/assets/74249209/087bc12e-b27b-4230-8e7c-5218240498af">
+
+
 
 6. Focusing on the products webpage, obtain its monthly overall sessions, its clickthrough rate and the conversion rate from visiting the page to placing an order 
 
