@@ -11,7 +11,7 @@
 _The case study follows the six step data analysis process:_
 
 ###  ❓ [Ask](#1-ask)
-### 💻 [Prepare](#2-prepare)
+### 💻 [Understand](#2-understand)
 ### 🛠  [Process](#3-process)
 ### 📊 [Analyze](#4-analyze)
 ### 📋 [Share](#5-share)
@@ -25,7 +25,7 @@ Maven Fuzzy Factory is ready to secure its next round of funding and we are requ
 
 Primary stakeholders: Potential investors of Maven Fuzzy Factory
 
-## 2. Prepare 
+## 2. Understand
 Data Source: A custom built database named mavenfuzzyfactory that closely resembles the databases found in e-commerce companies
 
 Tables: 
