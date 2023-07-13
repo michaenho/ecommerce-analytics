@@ -147,9 +147,11 @@ FROM website_sessions ws
         ON ws.website_session_id = o.website_session_id
 GROUP BY 1,2;
 ```
-<img width="1060" alt="Screenshot 2023-07-13 at 2 51 54 PM" src="https://github.com/michaenho/mavenfuzzyfactory-analytics/assets/74249209/46f2519f-d19f-4304-b484-72c2b0f354c0">
+<img width="1055" alt="Screenshot 2023-07-13 at 3 32 52 PM" src="https://github.com/michaenho/mavenfuzzyfactory-analytics/assets/74249209/da2ac429-076a-4627-a07d-549e2d495945">
 
-<img width="1062" alt="Screenshot 2023-07-13 at 2 55 38 PM" src="https://github.com/michaenho/mavenfuzzyfactory-analytics/assets/74249209/02c9b56e-1f9f-4125-a13f-fd171a1d53cc">
+
+<img width="1056" alt="Screenshot 2023-07-13 at 3 31 41 PM" src="https://github.com/michaenho/mavenfuzzyfactory-analytics/assets/74249209/57d1ea5f-4e02-46c5-a78a-f5457f9a63a1">
+
 
 
 
