@@ -1,4 +1,4 @@
-<img width="1057" alt="Screenshot 2023-07-13 at 4 05 28 PM" src="https://github.com/michaenho/mavenfuzzyfactory-analytics/assets/74249209/8ab363fe-9f8f-4d73-95f9-a430a5b5678f"># CASE STUDY: Maven Fuzzy Factory Analysis
+# CASE STUDY: Maven Fuzzy Factory Analysis
 
 ##### Author: Michaen Ho
 
