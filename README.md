@@ -49,47 +49,7 @@ Since it is a custom built database, the data used is synthetic (data privacy is
 
 ## 3. Process
 
-Examine the data:
-
-```
-head(bike_data)
-dim(bike_data)
-colnames(bike_data)
-summary(bike_data)
-```
-
-Indentify unnecessary data and remove those columns:
-
-```
-bike_data <- bike_data %>% select(-c(start_lat, start_lng, end_lat, end_lng))
-```
-
-Add two columns: ride length and day of the week:
-```
-bike_data <- bike_data %>% mutate(ride_length = ended_at - started_at) %>% mutate(day_of_week = weekdays(as.Date(bike_data$started_at)))
-
-#Convert ride_length from from seconds into minutes
-bike_data$ride_length <- as.numeric(bike_data$ride_length)
-bike_data$ride_length <- as.numeric(bike_data$ride_length/60)
-```
-
-⛔ The started and ended time is in a yyyy-mm-dd hh-mm-ss format. We can further divide this into two columns: date and time. This step is optional.
-```
-bike_data <- separate(bike_data,"started_at",into=c('start_date','start_time'), sep=' ')
-bike_data <- separate(bike_data,"ended_at",into=c('start_date','start_time'), sep=' ')
-```
-
-Remove data error:
-
-```
-#check for data with negative ride length:
-bike_data <- bike_data[bike_data$ride_length>0,]
-
-#check for data with ride length  more than 1 day (86400 seconds or 1440 mins):
-sum(bike_data$ride_length > 1440)
-```
-
-Clean the data to prepare for analysis in 4. Analyze!
+The datasets have already been pre-processed; hence, there is no need for any data cleaning.
 
 ## 4. Analyze
 
