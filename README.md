@@ -168,11 +168,13 @@ GROUP BY 1,2;
 
 <img width="1054" alt="Screenshot 2023-07-13 at 4 15 26 PM" src="https://github.com/michaenho/mavenfuzzyfactory-analytics/assets/74249209/c8d26f63-e2b3-46d2-b7f0-533882e46c75">
 
-🎨 **[Click here for the full visualisation](https://public.tableau.com/views/q5_1_16892593892100/Sheet8?:language=en-US&:display_count=n&:origin=viz_share_link)**
+🎨 **[Click here for the full visualisation](https://public.tableau.com/views/q5_2_16892593106170/Sheet9?:language=en-US&:display_count=n&:origin=viz_share_link)**
+
 
 <img width="1057" alt="Screenshot 2023-07-13 at 4 05 28 PM" src="https://github.com/michaenho/mavenfuzzyfactory-analytics/assets/74249209/087bc12e-b27b-4230-8e7c-5218240498af">
 
-🎨 **[Click here for the full visualisation](https://public.tableau.com/views/q5_2_16892593106170/Sheet9?:language=en-US&:display_count=n&:origin=viz_share_link)**
+🎨 **[Click here for the full visualisation](https://public.tableau.com/views/q5_1_16892593892100/Sheet8?:language=en-US&:display_count=n&:origin=viz_share_link)**
+
 
 6. Focusing on the products webpage, obtain its monthly overall sessions, its clickthrough rate and the conversion rate from visiting the page to placing an order 
 
