@@ -255,12 +255,19 @@ GROUP BY 1;
 
 ## 5. Act
 Conclusion based on our analysis:
+
 - Total website sessions and conversion rate have been consistently increasing over the quarters, which suggests that the paid advertisements and searches are working really well
+  
 - The steady increase in revenue over the quarters ensures good profitability over the long run
+  
 - Sales usually peak in the 4th quarter every year, especially during the festive or year-end sales period
+  
 - The increase in website sessions through paid channels is slower than that of direct/organic searches, which suggests more people actively search for the brand instead of relying on advertisements
+  
 - For the products webpage, its clickthrough rate and orders have been increasing steadily, which suggests that the webpage design is effective for users
+  
 - Product 4 cross sells very well with all other products
+
 
 
 Marketing recommendations to improve the business:
