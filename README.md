@@ -69,6 +69,8 @@ GROUP BY 1,2;
 ```
 <img width="1061" alt="Screenshot 2023-07-12 at 2 00 31 PM" src="https://github.com/michaenho/mavenfuzzyfactory-analytics/assets/74249209/4cd30f3c-5264-4800-a34e-14a7a100e3de">
 
+🎨 **[Link to the visualisation](https://public.tableau.com/views/q1_16889764360750/Sheet1?:language=en-US&:display_count=n&:origin=viz_share_link)**
+
 
 
 
