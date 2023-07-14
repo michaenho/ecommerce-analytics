@@ -1,4 +1,4 @@
-# CASE STUDY: Maven Fuzzy Factory Analysis
+# CASE STUDY: E-Commerce Analysis
 
 ##### Author: Michaen Ho
 
@@ -15,15 +15,15 @@ _The case study follows the six step data analysis process:_
 ### 📋 [Reflect](#6-reflect)
 
 ## Scenario
-Maven Fuzzy Factory is ready to secure its next round of funding and we are required to tell a compelling story to investors. I, as a data analyst in the team, is tasked to pull the relevant data, and help my CEO craft a story about a data-driven company that has been producing rapid growth.
+The company is ready to secure its next round of funding and we are required to tell a compelling story to investors. I, as a data analyst in the team, is tasked to pull the relevant data, and help my CEO craft a story about a data-driven company that has been producing rapid growth.
 
 ## 1. Ask
 💡 **BUSINESS TASK: Extract and analyse traffic and website performance data to craft a growth story that we could sell to potential investors.**
 
-Primary stakeholders: Potential investors of Maven Fuzzy Factory
+Primary stakeholders: Potential investors of the company
 
 ## 2. Understand
-Data Source: A custom built database named mavenfuzzyfactory that closely resembles the databases found in e-commerce companies
+Data Source: A custom built database that closely resembles the databases found in e-commerce companies
 
 Tables: 
   - order_item_refunds
