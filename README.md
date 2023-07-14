@@ -2,9 +2,6 @@
 
 ##### Author: Michaen Ho
 
-##### [Tableau Dashboard](https://public.tableau.com/app/profile/emily.liang7497/viz/CyclisticBikeShareAnalysisDashboard/GiantDashboard)
-
-##### [Tableau Story Presentation to Skateholders](https://public.tableau.com/app/profile/emily.liang7497/viz/CyclistBikeShareAnalysis/Story1)
 
 #
 
@@ -14,8 +11,8 @@ _The case study follows the six step data analysis process:_
 ### 💻 [Understand](#2-understand)
 ### 🛠  [Process](#3-process)
 ### 📊 [Analyze](#4-analyze)
-### 📋 [Share](#5-share)
-### 🚲 [Act](#6-act)
+### 🚲 [Act](#5-act)
+### 📋 [Reflect](#6-reflect)
 
 ## Scenario
 Maven Fuzzy Factory is ready to secure its next round of funding and we are required to tell a compelling story to investors. I, as a data analyst in the team, is tasked to pull the relevant data, and help my CEO craft a story about a data-driven company that has been producing rapid growth.
@@ -254,20 +251,9 @@ GROUP BY 1;
  ⛔ For the complete SQL code for the project, [SQL code link](https://github.com/michaenho/mavenfuzzyfactory-analytics/blob/main/mavenfuzzyfactory-SQL)!
  
 
-## 5. Share 
-🎨 **[Tabealu Dashboard on Bike-Sharing Case Study](https://public.tableau.com/app/profile/emily.liang7497/viz/CyclisticBikeShareAnalysisDashboard/GiantDashboard)**
-
-![dash](https://user-images.githubusercontent.com/62857660/136834696-39ee5b7e-71ca-43f7-b7f9-a5d4c2fd53d6.PNG)
-
-🎨 **[Tableau Presentation on Cyclistic Bike-Sharing Case Study](https://public.tableau.com/app/profile/emily.liang7497/viz/CyclistBikeShareAnalysis/Story1).**
-
-![1](https://user-images.githubusercontent.com/62857660/136473917-62988816-3893-4ee1-b2ce-fdb17f9a6552.JPG)
-![2](https://user-images.githubusercontent.com/62857660/136473929-be13f89d-6ebe-43f0-96c0-9dc7cb7d1c7b.JPG)
 
 
-
-
-## 6. Act
+## 5. Act
 Conclusion based on our analysis:
 - Casual riders rides mostly during the weekends.
 - Casual riders ride longer duration, but least total trips. 
@@ -286,4 +272,5 @@ Marketing recommendations to convert casual riders into members:
 ##### 🎁 Point-award incentive system for riding more trips in a membership format to receive discount and partnership offers. 
 
 
+## 6. Reflect
 
