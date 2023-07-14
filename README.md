@@ -265,13 +265,13 @@ Conclusion based on our analysis:
 
 Marketing recommendations to improve the business:
 
-#####  Increase website/customer support during peak periods of 4th quarter due to the sharp increase in demand during that period
+- Increase website/customer support during peak periods of 4th quarter due to the sharp increase in demand during that period
 
-#####  Consider lowering the bids for paid channels since lesser customers are relying on them
+- Consider lowering the bids for paid channels since lesser customers are relying on them
 
-#####  Consider designing a new products webpage and do A/B testing with this current webpage to see how we could further improve the metrics and user experiences of the webpage
+- Consider designing a new products webpage and do A/B testing with this current webpage to see how we could further improve the metrics and user experiences of the webpage
 
-#####  Sell product 4 alongside products 1,2,3 / increase promotion for product 4 since customers are very likely to buy it together with the other 3 products
+- Sell product 4 alongside products 1,2,3 / increase promotion for product 4 since customers are very likely to buy it together with the other 3 products
 
 
 
