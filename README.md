@@ -255,21 +255,23 @@ GROUP BY 1;
 
 ## 5. Act
 Conclusion based on our analysis:
-- Casual riders rides mostly during the weekends.
-- Casual riders ride longer duration, but least total trips. 
-- Casual riders rides longer on docked bike, but least total trips.
-- Most popular station for casual riders are: Streeter Dr & Grand Ave, Lake Shore Dr & Monroe St, Millennium Park.
-- Most active months for casual riders are from June to August.
+- Total website sessions and conversion rate have been consistently increasing over the quarters, which suggests that the paid advertisements and searches are working really well
+- The steady increase in revenue over the quarters ensures good profitability over the long run
+- Sales usually peak in the 4th quarter every year, especially during the festive or year-end sales period
+- The increase in website sessions through paid channels is slower than that of direct/organic searches, which suggests more people actively search for the brand instead of relying on advertisements
+- For the products webpage, its clickthrough rate and orders have been increasing steadily, which suggests that the webpage design is effective for users
+- Product 4 cross sells very well with all other products
 
-Marketing recommendations to convert casual riders into members:
 
-##### 🚩  Marketing effort on the top 5 most popular stations for the causal riders. It can be a booth, print media on the bike or the locking station area, or social media post on contest starting from the most popular stations. 
+Marketing recommendations to improve the business:
 
-##### ⛱  Promotional short term membership offer during the summer months.
+#####  Increase website/customer support during peak periods of 4th quarter due to the sharp increase in demand during that period
 
-##### 🚴‍♂️ Promotional weekend term membership for the weekends.
+#####  Consider lowering the bids for paid channels since lesser customers are relying on them
 
-##### 🎁 Point-award incentive system for riding more trips in a membership format to receive discount and partnership offers. 
+#####  Consider designing a new products webpage and do A/B testing with this current webpage to see how we could further improve the metrics and user experiences of the webpage
+
+#####  Sell product 4 alongside products 1,2,3 / increase promotion for product 4 since customers are very likely to buy it together with the other 3 products
 
 
 
