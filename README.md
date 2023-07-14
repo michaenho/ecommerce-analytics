@@ -69,7 +69,7 @@ GROUP BY 1,2;
 ```
 <img width="1061" alt="Screenshot 2023-07-12 at 2 00 31 PM" src="https://github.com/michaenho/mavenfuzzyfactory-analytics/assets/74249209/4cd30f3c-5264-4800-a34e-14a7a100e3de">
 
-🎨 **[Link to the visualisation](https://public.tableau.com/views/q1_16889764360750/Sheet1?:language=en-US&:display_count=n&:origin=viz_share_link)**
+🎨 **[Click here for the full visualisation](https://public.tableau.com/views/q1_16889764360750/Sheet1?:language=en-US&:display_count=n&:origin=viz_share_link)**
 
 
 
@@ -90,7 +90,7 @@ GROUP BY 1,2;
 ```
 <img width="1057" alt="Screenshot 2023-07-12 at 2 36 16 PM" src="https://github.com/michaenho/mavenfuzzyfactory-analytics/assets/74249209/6cedb4aa-4b2b-4f2f-ac45-297b5f659c66">
 
-
+🎨 **[Click here for the full visualisation](https://public.tableau.com/views/q2_16892590097760/Sheet2?:language=en-US&:display_count=n&:origin=viz_share_link)**
 
 
 3. Obtain the overall number of orders from different channels for every quarter
@@ -111,10 +111,11 @@ GROUP BY 1,2;
 ```
 <img width="1055" alt="Screenshot 2023-07-13 at 3 32 52 PM" src="https://github.com/michaenho/mavenfuzzyfactory-analytics/assets/74249209/da2ac429-076a-4627-a07d-549e2d495945">
 
+🎨 **[Click here for the full visualisation](https://public.tableau.com/views/q3_1_16892590730100/Sheet3?:language=en-US&:display_count=n&:origin=viz_share_link)**
 
 <img width="1056" alt="Screenshot 2023-07-13 at 3 31 41 PM" src="https://github.com/michaenho/mavenfuzzyfactory-analytics/assets/74249209/57d1ea5f-4e02-46c5-a78a-f5457f9a63a1">
 
-
+🎨 **[Click here for the full visualisation](https://public.tableau.com/views/q3_2_16892591111130/Sheet4?:language=en-US&:display_count=n&:origin=viz_share_link)**
 
 
 
@@ -136,9 +137,11 @@ GROUP BY 1,2;
 ```
 <img width="1058" alt="Screenshot 2023-07-13 at 3 23 09 PM" src="https://github.com/michaenho/mavenfuzzyfactory-analytics/assets/74249209/76f18963-9815-4e0c-adcd-cee395fc0c52">
 
+🎨 **[Click here for the full visualisation](https://public.tableau.com/views/q4_1_16892591746640/Sheet5?:language=en-US&:display_count=n&:origin=viz_share_link)**
+
 <img width="1058" alt="Screenshot 2023-07-13 at 3 28 15 PM" src="https://github.com/michaenho/mavenfuzzyfactory-analytics/assets/74249209/5db16825-64ae-4b91-b438-f053764aa6a6">
 
-
+🎨 **[Click here for the full visualisation](https://public.tableau.com/views/q4_2_16892592172070/Sheet6?:language=en-US&:display_count=n&:origin=viz_share_link)**
 
 
 5. Obtain total monthly revenues and profits, as well as monthly revenues and profits for different products
@@ -165,11 +168,11 @@ GROUP BY 1,2;
 
 <img width="1054" alt="Screenshot 2023-07-13 at 4 15 26 PM" src="https://github.com/michaenho/mavenfuzzyfactory-analytics/assets/74249209/c8d26f63-e2b3-46d2-b7f0-533882e46c75">
 
-
+🎨 **[Click here for the full visualisation](https://public.tableau.com/views/q5_1_16892593892100/Sheet8?:language=en-US&:display_count=n&:origin=viz_share_link)**
 
 <img width="1057" alt="Screenshot 2023-07-13 at 4 05 28 PM" src="https://github.com/michaenho/mavenfuzzyfactory-analytics/assets/74249209/087bc12e-b27b-4230-8e7c-5218240498af">
 
-
+🎨 **[Click here for the full visualisation](https://public.tableau.com/views/q5_2_16892593106170/Sheet9?:language=en-US&:display_count=n&:origin=viz_share_link)**
 
 6. Focusing on the products webpage, obtain its monthly overall sessions, its clickthrough rate and the conversion rate from visiting the page to placing an order 
 
@@ -201,7 +204,7 @@ GROUP BY 1,2;
 
 ![image](https://github.com/michaenho/mavenfuzzyfactory-analytics/assets/74249209/ccebe89f-5234-4fc9-b4fb-6b7bdc4ce95a)
 
-
+🎨 **[Click here for the full visualisation](https://public.tableau.com/views/q6_16892594652410/Sheet1?:language=en-US&:display_count=n&:origin=viz_share_link)**
 
 7. After launching the newest product, obtain sales data since then, and show how well each product cross sells from one another
 
@@ -243,6 +246,8 @@ GROUP BY 1;
 
 ![image](https://github.com/michaenho/mavenfuzzyfactory-analytics/assets/74249209/bd400456-7361-47f0-8f8e-c46160770710)
 
+
+🎨 **[Click here for the full visualisation](https://public.tableau.com/views/q7_16892595127090/Sheet2?:language=en-US&:display_count=n&:origin=viz_share_link)**
 
  ⛔ For the complete SQL code for the project, [SQL code link](https://github.com/michaenho/mavenfuzzyfactory-analytics/blob/main/mavenfuzzyfactory-SQL)!
  
