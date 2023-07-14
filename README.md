@@ -5,14 +5,14 @@
 
 #
 
-_The case study follows the six step data analysis process:_
+_The case study follows the five step data analysis process:_
 
 ###  ❓ [Ask](#1-ask)
 ### 💻 [Understand](#2-understand)
 ### 🛠  [Process](#3-process)
 ### 📊 [Analyze](#4-analyze)
 ### 🚲 [Act](#5-act)
-### 📋 [Reflect](#6-reflect)
+
 
 ## Scenario
 The company is ready to secure its next round of funding and we are required to tell a compelling story to investors. I, as a data analyst in the team, is tasked to pull the relevant data, and help my CEO craft a story about a data-driven company that has been producing rapid growth.
@@ -272,5 +272,4 @@ Marketing recommendations to convert casual riders into members:
 ##### 🎁 Point-award incentive system for riding more trips in a membership format to receive discount and partnership offers. 
 
 
-## 6. Reflect
 
